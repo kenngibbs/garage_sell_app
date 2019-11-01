@@ -24,7 +24,7 @@ class GarageSell extends Component{
                     let tempMappedElements = response.map(
                         (eachElement)=>{
                             return(<div key={eachElement.id}>
-                                <Purchases purchase={eachElement} reloadGarageSell={this.reloadGarageSell}/>
+                                <Purchases purchase={eachElement} editElement={this.editElement} reloadGarageSell={this.reloadGarageSell}/>
                             </div>);
                         }
                     );
