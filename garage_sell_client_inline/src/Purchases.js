@@ -15,7 +15,7 @@ class Purchases extends Component{
     stopEdittingForm=()=>{
         let tempJSXInfo =
             <div>
-                <h3>{this.props.purchase.buyerName} made a purchase of {this.props.purchase.price} on {this.props.purchase.datePurchased}</h3>
+                <h3>{this.props.purchase.buyerName} made a purchase of {this.props.purchase.price} on {new Date(this.props.purchase.datePurchased).toLocaleString()}</h3>
                 <button onClick={this.editElement}>Edit</button> or <button onClick={this.deleteElement}>Delete</button>
                 <hr/>
             </div>;
@@ -26,7 +26,7 @@ class Purchases extends Component{
         let tempJSXInfo =
             <div>
                 <h3>{this.props.purchase.buyerName} made a purchase of {this.props.purchase.price} on {this.props.purchase.datePurchased}</h3>
-                <button onClick={this.deleteElement}>Delete</button> or <button onClick={this.stopEdittingForm}>Cancel</button>
+                <button onClick={this.stopEdittingForm}>Cancel</button> or <button onClick={this.deleteElement}>Delete</button>
                 <form onSubmit={this.submitNewPurchase}>
                     <label htmlFor="buyerNameEdit">Enter buyers Name:</label>
                     <input type="text" id="buyerNameEdit" /><br/>

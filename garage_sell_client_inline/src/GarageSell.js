@@ -14,9 +14,7 @@ class GarageSell extends Component{
     }
 
     reloadGarageSell=()=>{
-        console.log(this.state.allGarageSellsArray);
-        console.log("reload");
-        fetch("/garage_sell/")
+        fetch("/garage_sell/    ")
             .then(data=>data.json())
             .then(response=>{
                 if (response.length>0)
@@ -28,7 +26,7 @@ class GarageSell extends Component{
                             </div>);
                         }
                     );
-                    this.setState({allGarageSellsArray:tempMappedElements},()=>console.log(this.state.allGarageSellsArray))
+                    this.setState({allGarageSellsArray:tempMappedElements});
                 }
                 else{
                     this.setState({allGarageSellsArray:<h2>No results found</h2>})
