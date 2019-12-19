@@ -1,2 +1,4 @@
 garage_sell_server/.idea/
-garage_sell_client/.idea/
+garage_sell_client/.idea/garage_sell_server/garage_sell_server/__pycache__/
+garage_sell_server/garage_sell_app/migrations/__pycache__/
+garage_sell_server/garage_sell_app/__pycache__/
